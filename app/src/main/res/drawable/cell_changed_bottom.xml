@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    res/drawable/cell_changed_bottom.xml
+    ─────────────────────────────────────────────────────────────────────────────
+    PURPOSE:
+      Background for a table cell that has CHANGED between old and new agreement.
+      Applied to the right-column cells in the Side-by-Side comparison TableLayout
+      where a value has changed (shown in red text).
+
+    VISUAL EFFECT:
+      ┌──────────────────────────┐
+      │ ₹15,000/month 🔴         │  ← red-tinted background (#1FE05C5C)
+      │                          │
+      ├──────────────────────────┤  ← 1dp bottom border (#2A2C38)
+
+    USAGE in layout XML:
+      android:background="@drawable/cell_changed_bottom"
+
+    APPLIED TO:
+      All "changed" right-column cells EXCEPT the very last row.
+      For the last row use cell_changed_no_border.xml (no bottom border).
+
+    HOW IT WORKS — 2-layer LayerList:
+      Layer 1 → Red-tinted fill covering the full cell area
+      Layer 2 → A border-colored rectangle pushed to the bottom edge only
+                via android:top="999dp" (large inset clips everything above),
+                android:bottom="-1dp" (bleeds flush to the bottom edge)
+    ─────────────────────────────────────────────────────────────────────────────
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        LAYER 1 — Red-tinted background fill
+        ──────────────────────────────────────
+        Color: #1FE05C5C
+          • #1F = 31 in decimal = ~12% opacity
+          • E05C5C = @color/red
+        This fills the entire cell with a subtle red wash to signal a change.
+    -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#1FE05C5C" />
+        </shape>
+    </item>
+
+    <!--
+        LAYER 2 — Bottom border strip
+        ──────────────────────────────
+        Color: #2A2C38 (@color/border)
+
+        The inset trick explained:
+          android:top="999dp"   → Pushes the rectangle's starting point 999dp
+                                  downward. Since 999dp far exceeds any screen
+                                  height, the visible area is clipped to just
+                                  the bottom edge of the view.
+          android:bottom="-1dp" → Allows the rectangle to bleed 1dp beyond
+                                  the view's bottom boundary, making the border
+                                  appear exactly flush at the bottom edge.
+          android:left="0dp"    → Border spans full width, left to right.
+          android:right="0dp"   → Border spans full width, left to right.
+
+        Net result: A 1dp horizontal line at the very bottom of the cell.
+    -->
+    <item
+        android:top="999dp"
+        android:bottom="-1dp"
+        android:left="0dp"
+        android:right="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2A2C38" />
+        </shape>
+    </item>
+
+</layer-list>

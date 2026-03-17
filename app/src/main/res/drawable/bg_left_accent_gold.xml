@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    res/drawable/bg_left_accent_gold.xml
+    A surface-colored background with a solid 3dp GOLD stripe on the LEFT edge only.
+    Usage: android:background="@drawable/bg_left_accent_gold"
+    Applied to: Tips box on the Upload screen, any info/highlight card
+                that needs a left accent border (like CSS border-left).
+
+    Strategy — 2-layer LayerList:
+      Layer 1: Full surface-colored background (fills the entire view)
+      Layer 2: Gold-colored rectangle, constrained to only the left 3dp strip
+               by setting right="9999dp" (pushes the rect's right edge far off screen)
+
+    The result: surface background + a 3dp gold left stripe visible on top.
+
+    Visual outcome:
+    ┌─────────────────────────────────┐
+    │▌ Tips for best results          │   ← 3dp gold left bar
+    │▌ • Clear lighting               │
+    │▌ • Avoid shadows                │
+    └─────────────────────────────────┘
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Layer 1 — Surface background fill
+        Fills the entire card/view with the surface color.
+        Color: #16181F (@color/surface)
+    -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#16181F" />  <!-- @color/surface -->
+        </shape>
+    </item>
+
+    <!--
+        Layer 2 — Gold left accent strip
+        We use inset to confine this layer to the left 3dp only:
+          android:left="0dp"      → strip starts flush at the left edge
+          android:right="9999dp"  → strip's right boundary is pushed 9999dp
+                                    to the right (effectively off-screen),
+                                    leaving only the leftmost 3dp visible.
+          android:top="0dp"       → strip runs full height from top...
+          android:bottom="0dp"    → ...to bottom.
+
+        The solid color #C8A96E is @color/accent_gold.
+    -->
+    <item
+        android:left="0dp"
+        android:right="9999dp"
+        android:top="0dp"
+        android:bottom="0dp">
+
+        <!--
+            The shape itself is a plain rectangle.
+            Width is determined by the inset above (right="9999dp" clips it to 3dp).
+            We draw it 3dp wide by offsetting right by (total_width - 3dp).
+            Since 9999dp >> any screen width, the visible portion = 3dp.
+
+            To make it exactly 3dp, use:
+              android:right="[screen_width - 3dp]dp"
+            OR simply rely on the 9999dp overflow trick which always gives ~3dp left bar.
+        -->
+        <shape android:shape="rectangle">
+            <solid android:color="#C8A96E" />  <!-- @color/accent_gold -->
+        </shape>
+
+    </item>
+
+</layer-list>
+
+

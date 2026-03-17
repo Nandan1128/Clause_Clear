@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_dark">
+
+        <!-- Top App Bar (unchanged visually) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/bg_icon_btn"
+                android:src="@drawable/ic_back_arrow"
+                app:tint="@color/text_muted"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compare Documents"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find what changed between versions"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_muted"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Scrollable Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="32dp">
+
+                <!-- Document Slot OLD -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardOld"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/surface"
+                    app:strokeColor="@color/accent_gold"
+                    app:strokeWidth="1.5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/slotold"
+                        android:gravity="center_vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:text="📄"
+                            android:textSize="24sp"
+                            android:layout_marginEnd="14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvOldDocLabel"
+                                android:text="Old Agreement"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_primary"
+                                android:layout_marginBottom="2dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvOldFileName"
+                                android:text="fileA.pdf"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_muted"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imgOldCheck"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_check"
+                            app:tint="@color/accent_gold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Document Slot NEW -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/surface"
+                    app:strokeColor="@color/accent_gold"
+                    app:strokeWidth="1.5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/slotnew"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:text="📄"
+                            android:textSize="24sp"
+                            android:layout_marginEnd="14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvNewDocLabel"
+                                android:text="New Agreement"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_primary"
+                                android:layout_marginBottom="2dp"/>
+
+                            <TextView
+                                android:id="@+id/tvNewFileName"
+                                android:text="fileB.pdf"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_muted"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imgNewCheck"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_check"
+                            app:tint="@color/accent_gold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Changes Header -->
+                <TextView
+                    android:id="@+id/tvChangesHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CHANGES FOUND — 0 ITEMS"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_muted"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- RecyclerView (instead of static cards) -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvChanges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+
+                <!-- Button -->
+                <Button
+                    android:id="@+id/btnSideBySide"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="View Side-by-Side →"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/bg_dark"
+                    android:background="@drawable/btn_primary_gradient"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

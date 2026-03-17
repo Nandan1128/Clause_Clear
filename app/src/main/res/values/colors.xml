@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Background -->
+    <color name="bg_dark">#0E0F13</color>
+    <color name="bg_deepest">#06070A</color>
+
+    <!-- Surface / Card Backgrounds -->
+    <color name="surface">#16181F</color>
+    <color name="surface2">#1E2029</color>
+
+    <!-- Borders -->
+    <color name="border">#2A2C38</color>
+
+    <!-- Text -->
+    <color name="text_primary">#F0F0F4</color>
+    <color name="text_secondary">#C0C3D4</color>
+    <color name="text_muted">#7A7D8F</color>
+    <color name="text_dim">#4E5165</color>
+
+    <!-- Accent Gold -->
+    <color name="accent_gold">#C8A96E</color>
+    <color name="accent_gold_dark">#A07840</color>
+    <color name="accent_gold_dim">#1FC8A96E</color>  <!-- 12% opacity -->
+
+    <!-- Risk: Red (High) -->
+    <color name="red">#E05C5C</color>
+    <color name="red_dim">#1FE05C5C</color>          <!-- 12% opacity -->
+
+    <!-- Risk: Yellow (Medium) -->
+    <color name="yellow">#D4A017</color>
+    <color name="yellow_dim">#1FD4A017</color>       <!-- 12% opacity -->
+
+    <!-- Risk: Green (Info / OK) -->
+    <color name="green">#4CAF7D</color>
+    <color name="green_dim">#1F4CAF7D</color>        <!-- 12% opacity -->
+
+    <!-- Utility -->
+    <color name="transparent">#00000000</color>
+
+
+    <!-- Switch colors (used in selector drawables) -->
+    <color name="switch_thumb_on">#C8A96E</color>
+    <color name="switch_thumb_off">#7A7D8F</color>
+    <color name="switch_track_on">#4DC8A96E</color>  <!-- 30% gold -->
+    <color name="switch_track_off">#2A2C38</color>
+
+</resources>

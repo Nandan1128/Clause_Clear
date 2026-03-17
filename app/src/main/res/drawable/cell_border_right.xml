@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    res/drawable/cell_border_right.xml
+    Draws a 1dp border ONLY on the RIGHT edge.
+    Usage: android:background="@drawable/cell_border_right"
+    Applied to: The LAST row's LEFT cell in the Side-by-Side comparison table.
+                Last row needs no bottom border (it's the table's final row),
+                but the left column always needs a right divider to separate
+                it from the right column.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Layer 1: Transparent background body -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+    <!-- Layer 2: RIGHT border (1dp vertical line on the right edge) -->
+    <!--
+        left="999dp" → pushes start of rect far right, so only a
+        1dp sliver at the far right edge remains visible.
+        right="-1dp" → allows that sliver to bleed flush to the edge.
+    -->
+    <item
+        android:left="999dp"
+        android:right="-1dp"
+        android:top="0dp"
+        android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2A2C38" />  <!-- @color/border -->
+        </shape>
+    </item>
+
+</layer-list>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Attributes for your Home activity view (e.g., a BottomNavigationView) -->
+    <declare-styleable name="YourCustomViewName">
+        <attr name="unselectedItemColor" format="color" />
+        <attr name="selectedItemColor" format="color" />
+    </declare-styleable>
+
+    <!-- Attributes for your Processing activity view (e.g., a Stepper) -->
+    <declare-styleable name="StepView">
+        <attr name="stepStatus" format="string|enum" />
+        <attr name="stepLabel" format="string" />
+    </declare-styleable>
+</resources>

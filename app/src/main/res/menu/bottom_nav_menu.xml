@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--
+        LexSimple – res/menu/bottom_nav_menu.xml
+        Bottom navigation bar menu items for all main sections.
+    -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/uploadFragment"
+        android:icon="@drawable/ic_add_circle"
+        android:title="Analyze" />
+
+    <item
+        android:id="@+id/compareFragment"
+        android:icon="@drawable/ic_search"
+        android:title="Compare" />
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
+
+</menu>

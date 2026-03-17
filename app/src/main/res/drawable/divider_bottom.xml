@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--
+        res/drawable/divider_bottom.xml
+        Draws a 1dp border ONLY on the bottom edge.
+        Usage: android:background="@drawable/divider_bottom"
+        Applied to: Key Points rows, Settings rows, table rows that need a bottom separator.
+    -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Layer 1 — Transparent fill (the "body" of the view, no color added)
+    -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+    <!--
+        Layer 2 — Full solid rectangle in border color, then pushed UP by
+        inset so only the bottom 1dp strip remains visible.
+
+        How the inset trick works:
+          android:top="Xdp"  → the border rectangle starts X dp from the top.
+          We set top to (view_height - 1dp). Since we can't know the exact
+          height at design time, we use a very large top inset (e.g. 9999dp)
+          which effectively clips everything except the bottom 1dp line.
+
+        For a cleaner approach that works at any height:
+          Set bottom="-1dp" and leave top/left/right at 0 — this creates
+          a 1dp line at the very bottom by letting the rect overflow bottom.
+          However the safest cross-device method is the large-top-inset below.
+    -->
+    <item
+        android:top="999dp"
+        android:bottom="-1dp"
+        android:left="0dp"
+        android:right="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2A2C38" />  <!-- @color/border -->
+        </shape>
+    </item>
+
+</layer-list>

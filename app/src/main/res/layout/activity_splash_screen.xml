@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    LexSimple – AI Legal Document Simplifier
+    Screen 01: Splash / Trust Screen
+    Activity: splash_screen.kt
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="64dp"
+        android:paddingBottom="48dp">
+
+        <!-- App Logo -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="16dp"
+            app:cardBackgroundColor="@color/accent_gold">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="⚖️"
+                android:textSize="36sp"
+                android:gravity="center" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- App Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clause Clear"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Tagline -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Understand Legal Documents,\nNot Legal Advice"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LexSimple reads the fine print so you understand what you're actually signing."
+            android:textSize="13sp"
+            android:textColor="@color/text_muted"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="40dp" />
+
+        <!-- Trust Badges Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/surface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Trust Items -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/divider_bottom">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textSize="16sp" android:textColor="@color/green" android:layout_marginEnd="12dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Your documents stay completely private" android:textSize="13sp" android:textColor="@color/text_secondary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/divider_bottom">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textSize="16sp" android:textColor="@color/green" android:layout_marginEnd="12dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Files are never stored permanently" android:textSize="13sp" android:textColor="@color/text_secondary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textSize="16sp" android:textColor="@color/green" android:layout_marginEnd="12dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="No legal advice is provided" android:textSize="13sp" android:textColor="@color/text_secondary" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Disclaimer Checkbox Row -->
+        <LinearLayout
+            android:id="@+id/disclaimer_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="28dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_disclaimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                app:buttonTint="@color/accent_gold"
+                app:checkedIconTint="@color/white"
+                app:useMaterialThemeColors="false"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I understand this tool provides document summaries only, not legal advice. For legal matters, consult a qualified attorney."
+                android:textSize="12sp"
+                android:textColor="@color/text_muted"
+                android:lineSpacingExtra="3dp" />
+
+        </LinearLayout>
+
+        <!-- Continue Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Continue →"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/bg_dark"
+            android:background="@drawable/btn_primary_gradient"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+
+</ScrollView>

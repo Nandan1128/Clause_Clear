@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ClauseClear</string>
+
+    <!-- Emojis -->
+    <string name="emoji_wave">👋</string>
+    <string name="emoji_camera">📷</string>
+    <string name="emoji_folder">📁</string>
+    <string name="emoji_search">🔍</string>
+    <string name="emoji_scale">⚖️</string>
+    <string name="emoji_hourglass">⏳</string>
+    <string name="emoji_doc">📄</string>
+    <string name="emoji_red_circle">🔴</string>
+    <string name="emoji_yellow_circle">🟡</string>
+    <string name="emoji_green_circle">🟢</string>
+    <string name="emoji_clipboard">📋</string>
+    <string name="emoji_warning">⚠️</string>
+    <string name="emoji_bulb">💡</string>
+    <string name="emoji_thinking">🤔</string>
+    <string name="emoji_scroll">📜</string>
+    <string name="emoji_lock_pen">🔏</string>
+    <string name="emoji_unlock">🔓</string>
+    <string name="emoji_wastebasket">🗑️</string>
+    <string name="emoji_phone">📱</string>
+    <string name="emoji_prohibited">🚫</string>
+    <string name="emoji_bell">🔔</string>
+    <string name="emoji_pin">📌</string>
+    <string name="emoji_lock">🔒</string>
+    <string name="arrow_right">›</string>
+    <string name="doc_meta">📄  0-page PDF  •  0 clauses found</string>
+    <string name="key_points">📋  KEY POINTS</string>
+    <string name="risk_overview">⚠️  RISK OVERVIEW</string>
+    <string name="high_risk">🔴 High Risk</string>
+    <string name="medium_risk">🟡 Medium</string>
+    <string name="info_risk">🟢 Info</string>
+
+
+    <!-- Home -->
+    <string name="hi_nandan">Hi, Nandan %1$s</string>
+    <string name="analyzed_count">3 documents analyzed this month</string>
+    <string name="scan_document">Scan Document</string>
+    <string name="scan_subtitle">Use camera to scan paper docs</string>
+    <string name="upload_pdf_doc">Upload PDF / DOC</string>
+    <string name="upload_subtitle">Import files from your device</string>
+    <string name="compare_documents">Compare Documents</string>
+    <string name="compare_subtitle">Spot changes between versions</string>
+    <string name="recent_documents">RECENT DOCUMENTS</string>
+    <string name="no_documents">No documents analyzed yet</string>
+
+    <!-- Auth -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_subtitle">Login to your account</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="no_account">Don\'t have an account? Register</string>
+
+    <string name="create_account">Create Account</string>
+    <string name="register_subtitle">Join ClauseClear today</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="register_button">Register</string>
+    <string name="have_account">Already have an account? Login</string>
+
+    <!-- Processing -->
+    <string name="analyzing_document">Analyzing Document…</string>
+    <string name="processing_time">This usually takes 10–120 seconds</string>
+
+    <!-- Summary -->
+    <string name="document_title">Document Title</string>
+    <string name="analyzed_now">Analyzed just now</string>
+    <string name="key_points_label">%1$s  KEY POINTS</string>
+    <string name="risk_overview_label">%1$s  RISK OVERVIEW</string>
+    <string name="view_all_clauses">View All Clauses →</string>
+    <string name="doc_meta_format">%1$s  %2$d-page PDF  •  %3$d clauses found</string>
+
+    <!-- Clause List -->
+    <string name="all_clauses">All Clauses</string>
+    <string name="chip_all">All</string>
+    <string name="chip_high">%1$s High Risk</string>
+    <string name="chip_medium">%1$s Medium</string>
+    <string name="chip_info">%1$s Info</string>
+
+    <!-- Clause Detail -->
+    <string name="original_text_label">ORIGINAL TEXT</string>
+    <string name="plain_english_label">%1$s  PLAIN ENGLISH</string>
+    <string name="why_this_matters_label">WHY THIS MATTERS</string>
+    <string name="watch_for_label">%1$s  WHAT TO WATCH FOR</string>
+    <string name="legal_disclaimer_label">%1$s  This is not legal advice. Consult a qualified lawyer for legal matters.</string>
+
+    <!-- Upload -->
+    <string name="upload_document_title">Upload Document</string>
+    <string name="upload_from_files_label">📁  Upload from Files</string>
+    <string name="tips_title">📌  Tips for best results</string>
+    <string name="privacy_notice_text">🔒  Privacy: Documents are processed locally where possible. Files are never stored beyond your session.</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="privacy_preferences">Privacy &amp; preferences</string>
+    <string name="privacy_section">PRIVACY</string>
+    <string name="auto_delete_title">Auto-delete after 24hrs</string>
+    <string name="auto_delete_sub">Documents removed automatically</string>
+    <string name="local_storage_title">Local storage only</string>
+    <string name="local_storage_sub">Never upload to cloud servers</string>
+    <string name="no_ai_training_title">No AI training data</string>
+    <string name="no_ai_training_sub">Your docs don\'t train our models</string>
+    <string name="notifications_section">NOTIFICATIONS</string>
+    <string name="notif_alerts_title">Analysis complete alerts</string>
+    <string name="notif_alerts_sub">Get notified when doc is ready</string>
+    <string name="account_section">ACCOUNT</string>
+    <string name="logout">Logout</string>
+    <string name="legal_section">LEGAL</string>
+    <string name="legal_disclaimer_title">Legal Disclaimer</string>
+    <string name="legal_disclaimer_sub">Read full terms of use</string>
+    <string name="privacy_policy_title">Privacy Policy</string>
+    <string name="privacy_policy_sub">How we handle your data</string>
+    <string name="clear_all_docs">%1$s  Clear All Documents</string>
+    <string name="app_version_label">LexSimple v1.0.0  ·  Not legal advice</string>
+    <string name="dustbin">🗑️</string>
+    <string name="local_storage_icon">📱</string>
+    <string name="danger_icon">🚫</string>
+    <string name="bell_icon">🔔</string>
+    <string name="back">back\n</string>
+    <string name="more_options">More Option</string>
+</resources>

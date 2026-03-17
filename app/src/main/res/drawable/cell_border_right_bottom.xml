@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    res/drawable/cell_border_right_bottom.xml
+    Draws a 1dp border on the RIGHT edge AND the BOTTOM edge.
+    Usage: android:background="@drawable/cell_border_right_bottom"
+    Applied to: Left column cells in the Side-by-Side comparison TableLayout
+                (all rows except the last).
+
+    Strategy — 3-layer approach:
+      Layer 1: Transparent body fill
+      Layer 2: Right border  → inset all edges except right to clip the rect
+      Layer 3: Bottom border → inset all edges except bottom to clip the rect
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Layer 1: Transparent background body -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+    <!-- Layer 2: RIGHT border (1dp wide vertical line on the right edge) -->
+    <!--
+        left="999dp" forces the rectangle to start 999dp from the left,
+        meaning only a 1dp sliver on the far right remains visible.
+        right="-1dp" allows that sliver to bleed to the edge.
+    -->
+    <item
+        android:left="999dp"
+        android:right="-1dp"
+        android:top="0dp"
+        android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2A2C38" />  <!-- @color/border -->
+        </shape>
+    </item>
+
+    <!-- Layer 3: BOTTOM border (1dp tall horizontal line on the bottom edge) -->
+    <!--
+        top="999dp" forces the rectangle to start 999dp from the top,
+        meaning only a 1dp sliver at the very bottom remains visible.
+        bottom="-1dp" allows the sliver to bleed to the edge.
+    -->
+    <item
+        android:top="999dp"
+        android:bottom="-1dp"
+        android:left="0dp"
+        android:right="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2A2C38" />  <!-- @color/border -->
+        </shape>
+    </item>
+
+</layer-list>
