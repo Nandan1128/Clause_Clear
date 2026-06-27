@@ -10,9 +10,16 @@ ClauseClear is a privacy-first native Android app that analyzes legal documents 
 
 ## Screenshots
 
-| Disclaimer | Summary | Clause Detail | Compare |
-|:---:|:---:|:---:|:---:|
-| *(disclaimer screen)* | *(summary screen)* | *(clause detail)* | *(compare screen)* |
+<img width="390" height="844" alt="09_Side_by_Side" src="https://github.com/user-attachments/assets/f8b46c94-408e-4038-9415-fc1c7a71d2ce" />
+<img width="390" height="844" alt="10_Settings" src="https://github.com/user-attachments/assets/ea5843ec-37bc-4be4-849c-f1d40d7d12d8" />
+<img width="390" height="844" alt="01_Splash" src="https://github.com/user-attachments/assets/ab159504-8eab-4a49-b115-46473520f98d" />
+<img width="390" height="844" alt="02_Home_Dashboard" src="https://github.com/user-attachments/assets/6dbc45da-3f97-4912-8ce9-366c8e58776a" />
+<img width="390" height="844" alt="03_Upload_Scan" src="https://github.com/user-attachments/assets/982f2eb7-33aa-4898-ad1e-cfabeac42c6c" />
+<img width="390" height="844" alt="04_Processing" src="https://github.com/user-attachments/assets/331b5f6b-c94a-45ab-888a-b767b7409234" />
+<img width="390" height="844" alt="05_Document_Summary" src="https://github.com/user-attachments/assets/f833b2e9-8613-4f29-96ae-bb82957d5a17" />
+<img width="390" height="844" alt="06_Clause_List" src="https://github.com/user-attachments/assets/8c59dded-c709-41dc-a278-8a9fe4733277" />
+<img width="390" height="844" alt="07_Clause_Detail" src="https://github.com/user-attachments/assets/7eb197e1-8d5d-476a-b452-dc29709c42be" />
+<img width="390" height="844" alt="08_Compare_Documents" src="https://github.com/user-attachments/assets/65d97603-ee4b-4ee1-9957-e6629a078bcf" />
 
 ---
 
