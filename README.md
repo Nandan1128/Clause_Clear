@@ -126,11 +126,7 @@ cd clauseclear-android
 
 Create a `local.properties` file in the project root:
 
-```properties
-API_BASE_URL=https://api.clauseclear.com/
-```
-
-Or for local development:
+ for local development:
 
 ```properties
 API_BASE_URL=http://10.0.2.2:8080/
